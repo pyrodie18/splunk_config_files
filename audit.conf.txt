@@ -1,5 +1,5 @@
 audit.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file contains possible attributes and values you can use to configure
 # auditing in audit.conf.
@@ -30,7 +30,7 @@ audit log for the events reach your index.
 
 
 audit.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # This is an example audit.conf. Use this file to configure auditing.
 #

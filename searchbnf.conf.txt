@@ -1,5 +1,5 @@
 searchbnf.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 #
 OVERVIEW
@@ -197,7 +197,7 @@ related = <command list>
 * Optional
 
 searchbnf.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # The following are example stanzas for searchbnf.conf configurations.
 #

@@ -1,5 +1,5 @@
 commands.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 OVERVIEW
 # This file contains descriptions for the setting/value pairs that you can
 # use for creating search commands for custom search scripts.
@@ -309,7 +309,7 @@ tries to produce a larger chunk, the command is terminated.
 * Default: 0
 
 commands.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # This is an example commands.conf. Use this file to configure settings
 # for external search commands.

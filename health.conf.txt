@@ -1,5 +1,5 @@
 health.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file sets the default thresholds for Splunk Enterprise's built
 # in Health Report.
@@ -222,7 +222,7 @@ action.<action parameter> = <string>
 * feature:slave_version] stanzas are now DEPRECATED.
 
 health.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file contains an example health.conf. Use this file to configure thresholds
 # for Splunk Enterprise's built in Health Report.
