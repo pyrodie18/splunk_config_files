@@ -1,5 +1,5 @@
 deploymentclient.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -257,7 +257,7 @@ recv_timeout = <positive integer>
 information on this setting.
 
 deploymentclient.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # Example 1
 # Deployment client receives apps and places them into the same

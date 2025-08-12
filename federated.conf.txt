@@ -1,5 +1,5 @@
 federated.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains possible setting and value pairs for federated provider entries
 # for use when the federated search functionality is enabled.
@@ -594,7 +594,7 @@ search includes a 'FROM' clause.
 * Default: 9.1.0
 
 federated.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # Here are some examples of stanzas in federated.conf
 #

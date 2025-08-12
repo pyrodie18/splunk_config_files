@@ -1,5 +1,5 @@
 indexes.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # This file contains all possible options for an indexes.conf file. Use
@@ -3139,7 +3139,7 @@ has a value of "true".
 * Default: tsidx
 
 indexes.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains an example indexes.conf. Use this file to configure
 # indexing properties.

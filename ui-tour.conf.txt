@@ -1,5 +1,5 @@
 ui-tour.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains the available product tours for Splunk onboarding.
 #
@@ -142,7 +142,7 @@ stepClickElement<int> = <string>
 * Optional.
 
 ui-tour.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains the tours available for Splunk Onboarding
 #
