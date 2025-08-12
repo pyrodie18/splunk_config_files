@@ -1,5 +1,5 @@
 distsearch.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains possible attributes and values you can use to configure
 # distributed search.
@@ -729,7 +729,7 @@ define a 'servers' list for that distributed search group.
 * Default: false
 
 distsearch.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # These are example configurations for distsearch.conf. Use this file to
 # configure distributed search. For all available attribute/value pairs, see

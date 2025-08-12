@@ -1,5 +1,5 @@
 wmi.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains possible setting/value pairs for configuring Windows
 # Management Instrumentation (WMI) access from Splunk Enterprise.
@@ -239,7 +239,7 @@ namespace.
 * Default: root\cimv2.
 
 wmi.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example wmi.conf. These settings are used to control inputs
 # from WMI providers. Refer to wmi.conf.spec and the documentation at

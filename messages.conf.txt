@@ -1,5 +1,5 @@
 messages.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains attribute/value pairs for configuring externalized strings
 # in messages.conf.
@@ -126,7 +126,7 @@ reducing severity instead. Using "none" might impact diagnosability.)
 * Default: auto
 
 messages.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains an example messages.conf of attribute/value pairs for
 # configuring externalized strings.

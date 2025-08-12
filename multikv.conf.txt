@@ -1,5 +1,5 @@
 multikv.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains descriptions of the settings that you can use to
 # create multikv rules. Multikv is the process of extracting events
@@ -114,7 +114,7 @@ of the following delimiters are found: " ", "\t"
 for example: the output of 'ls -lah' which misses a header altogether.
 
 multikv.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains example multi key/value extraction configurations.
 #

@@ -1,5 +1,5 @@
 savedsearches.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains possible setting/value pairs for saved search entries in
 # the savedsearches.conf file. You can configure saved searches by creating
@@ -1200,7 +1200,7 @@ qualifiedSearch = <string>
 * Not used anymore. Splunk software computes this value during runtime.
 
 savedsearches.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains example saved searches and alerts.
 #

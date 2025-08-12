@@ -1,5 +1,5 @@
 app.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 OVERVIEW
 # This file maintains the state of a given app in the Splunk platform. It can
@@ -412,7 +412,7 @@ local/app.conf
 * Default: not set
 
 app.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # The following are example app.conf configurations. Configure properties for
 # your custom application.

@@ -1,5 +1,5 @@
 transactiontypes.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains all possible attributes and value pairs for a
 # transactiontypes.conf file. Use this file to configure transaction searches
@@ -165,7 +165,7 @@ that must be retrieved to find transactions.
 * Default: "*" (all events)
 
 transactiontypes.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example transactiontypes.conf. Use this file as a template to
 # configure transactions types.

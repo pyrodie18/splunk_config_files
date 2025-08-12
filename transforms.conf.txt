@@ -1,5 +1,5 @@
 transforms.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains settings and values that you can use to configure
 # data transformations.
@@ -989,7 +989,7 @@ rules.
 
 
 transforms.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example transforms.conf. Use this file to create regexes and
 # rules for transforms. Use this file in tandem with props.conf.
