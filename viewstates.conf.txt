@@ -1,5 +1,5 @@
 viewstates.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file explains how to format viewstates.
 #
@@ -12,33 +12,32 @@ viewstates.conf.spec
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 
 GLOBAL SETTINGS
-
 # Use the [default] stanza to define any global settings.
-#  * You can also define global settings outside of any stanza, at the top
-#    of the file.
-#  * Each conf file should have at most one default stanza. If there are
-#    multiple default stanzas, attributes are combined. In the case of
-#    multiple definitions of the same attribute, the last definition in the
-#    file wins.
-#  * If an attribute is defined at both the global level and in a specific
-#    stanza, the value in the specific stanza takes precedence.
+# * You can also define global settings outside of any stanza, at the top
+# of the file.
+# * Each conf file should have at most one default stanza. If there are
+# multiple default stanzas, attributes are combined. In the case of
+# multiple definitions of the same attribute, the last definition in the
+# file wins.
+# * If an attribute is defined at both the global level and in a specific
+# stanza, the value in the specific stanza takes precedence.
 [<view_name>:<viewstate_id>]
 * Auto-generated persistence stanza label that corresponds to UI views
 * The <view_name> is the URI name (not label) of the view to persist
 * if <view_name> = "*", then this viewstate is considered to be 'global'
 * The <viewstate_id> is the unique identifier assigned to this set of
-  parameters
+parameters
 * <viewstate_id> = '_current' is a reserved name for normal view
-  'sticky state'
+'sticky state'
 * <viewstate_id> = '_empty' is a reserved name for no persistence,
-  i.e., all defaults
+i.e., all defaults
 
 <module_id>.<setting_name> = <string>
 * The <module_id> is the runtime id of the UI module requesting persistence
 * The <setting_name> is the setting designated by <module_id> to persist
 
 viewstates.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This is an example viewstates.conf.
 #

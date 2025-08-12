@@ -1,5 +1,5 @@
 pubsub.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains possible attributes and values for configuring a client of
 # the PubSub system (broker).
@@ -14,16 +14,15 @@ pubsub.conf.spec
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 
 GLOBAL SETTINGS
-
 # Use the [default] stanza to define any global settings.
-#   * You can also define global settings outside of any stanza, at the top of
-#     the file.
-#   * Each conf file should have at most one default stanza. If there are
-#     multiple default stanzas, attributes are combined. In the case of
-#     multiple definitions of the same attribute, the last definition in the
-#     file wins.
-#   * If an attribute is defined at both the global level and in a specific
-#     stanza, the value in the specific stanza takes precedence.
+# * You can also define global settings outside of any stanza, at the top of
+# the file.
+# * Each conf file should have at most one default stanza. If there are
+# multiple default stanzas, attributes are combined. In the case of
+# multiple definitions of the same attribute, the last definition in the
+# file wins.
+# * If an attribute is defined at both the global level and in a specific
+# stanza, the value in the specific stanza takes precedence.
 
 #******************************************************************
 # Configure the physical location where deploymentServer is running.
@@ -35,9 +34,9 @@ disabled = <boolean>
 
 targetUri = <IP:Port>|<hostname:Port>|direct
 * Specify either the url of a remote server in case the broker is remote, or
-  just the keyword "direct" when broker is in-process.
+just the keyword "direct" when broker is in-process.
 * It is usually a good idea to co-locate the broker and the Deployment Server
-  on the same Splunk. In such a configuration, all
+on the same Splunk. In such a configuration, all
 * deployment clients would have targetUri set to deploymentServer:port.
 
 #******************************************************************
@@ -50,7 +49,7 @@ disabled = false
 targetUri = direct
 [pubsub-server:<logicalName>]
 * It is possible for any Splunk to be a broker. If you have multiple brokers,
-  assign a logicalName that is used by the clients to refer to it.
+assign a logicalName that is used by the clients to refer to it.
 
 disabled = <false or true>
 * Default: false
@@ -58,10 +57,10 @@ disabled = <false or true>
 targetUri = <IP:Port>|<hostname:Port>|direct
 * The URI of a Splunk that is being used as a broker.
 * The keyword "direct" implies that the client is running on the same Splunk
-  instance as the broker.
+instance as the broker.
 
 pubsub.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 
 [pubsub-server:deploymentServer]
 disabled=false

@@ -1,5 +1,5 @@
 ui-tour.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains the available product tours for Splunk onboarding.
 #
@@ -13,14 +13,13 @@ ui-tour.conf.spec
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 #
 GLOBAL SETTINGS
-
 # Use the [default] stanza to define any global settings.
-#   * You can also define global settings outside of any stanza, at the top of
-#     the file.
-#   * This is not a typical conf file for configurations. It is used to set/create
-#     tours to demonstrate product functionality to users.
-#   * If an attribute is defined at both the global level and in a specific
-#     stanza, the value in the specific stanza takes precedence.
+# * You can also define global settings outside of any stanza, at the top of
+# the file.
+# * This is not a typical conf file for configurations. It is used to set/create
+# tours to demonstrate product functionality to users.
+# * If an attribute is defined at both the global level and in a specific
+# stanza, the value in the specific stanza takes precedence.
 
 [<stanza name>]
 * The name of the UI tour.
@@ -41,7 +40,7 @@ type = image|interactive
 * Determines the type of tour.
 * Required.
 * If set to "image", the tour is a simple image tour where the user clicks through
-  a series of screenshots or images.
+a series of screenshots or images.
 * If set to "interactive", the user participates in an interactive UI tour.
 
 label = <string>
@@ -54,7 +53,7 @@ tourPage = <string>
 
 managerPage = <boolean>
 * Used to signifiy that the 'tourPage' is a manager page. This changes the URL of
-  when the 'tourPage' is rendered from "/app/{app}/{view}" to "/manager/{app}/{view}".
+when the 'tourPage' is rendered from "/app/{app}/{view}" to "/manager/{app}/{view}".
 * Optional
 
 viewed = <boolean>
@@ -75,10 +74,10 @@ doneText = <string>
 
 doneURL = <string>
 * A Splunk URL that redirects the user once the tour is over and they click a
-  link or button to exit.
+link or button to exit.
 * Optional.
 * Helpful to use with the 'doneText' setting to specify a starting location for the user
-  after they take the tour.
+after they take the tour.
 * The Splunk link is formed after the localization portion of the full URL. For example, if the link
 * is localhost:8000/en-US/app/search/reports, the doneURL will be "app/search/reports".
 
@@ -101,10 +100,10 @@ imageCaption<int> = <string>
 
 imgPath = <string>
 * The subdirectory relative to Splunk's 'img' directory in which users put the images.
-  This will be appended to the URL for image access and not make a server request within Splunk.
-  Ex) If the user puts images in a subdirectory 'foo': imgPath = /foo.
-  Ex) If within an app, imgPath = /foo will point to the app's img path of
-      appserver/static/img/foo
+This will be appended to the URL for image access and not make a server request within Splunk.
+Ex) If the user puts images in a subdirectory 'foo': imgPath = /foo.
+Ex) If within an app, imgPath = /foo will point to the app's img path of
+appserver/static/img/foo
 * Required only if images are not in the main 'img' directory.
 
 context = <system|<specific app name>>
@@ -118,7 +117,7 @@ For interactive tours
 
 urlData = <string>
 * The string of any querystring variables used with the 'tourPage' setting
-  to create the full URL executing this tour.
+to create the full URL executing this tour.
 * Optional.
 * Don't add "?" to the beginning of this string.
 
@@ -143,7 +142,7 @@ stepClickElement<int> = <string>
 * Optional.
 
 ui-tour.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains the tours available for Splunk Onboarding
 #

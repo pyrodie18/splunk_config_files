@@ -1,5 +1,5 @@
 checklist.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains the set of attributes and values you can use to
 # configure checklist.conf to run health checks in Monitoring Console.
@@ -24,14 +24,14 @@ description = <ASCII string>
 
 failure_text = <ASCII string>
 * If this health check did not pass, the text that you specify in this setting can
-  explain what went wrong.
+explain what went wrong.
 * While this setting is optional, if you do not specify a value for this
-  setting, this health check does not display any text that helps
-  identify why it did not pass.
+setting, this health check does not display any text that helps
+identify why it did not pass.
 
 suggested_action = <ASCII string>
 * (optional) Suggested actions for diagnosing and fixing your Splunk installation
-  so this health check is no longer failing.
+so this health check is no longer failing.
 * If omitted no suggested actions for fixing this health check will be displayed.
 
 doc_link = <ASCII string>
@@ -44,7 +44,7 @@ doc_title = <ASCII string>
 * Must be included if doc_link exists.
 * Will be inserted in the text for the help documentation link like so: "Learn more about $doc_title$"
 * If doc_link is a comma separated list,
-*   then doc_title must also be a comma separated list with one title per item corresponding to doc_link.
+* then doc_title must also be a comma separated list with one title per item corresponding to doc_link.
 
 applicable_to_groups = <ASCII string>
 * (optional) Comma separated list of applicable groups that this check should be run against.
@@ -52,7 +52,7 @@ applicable_to_groups = <ASCII string>
 
 environments_to_exclude = <ASCII string>
 * (optional) Comma separated list of environments that the health check should not run in.
-*   Possible environments are 'standalone' and 'distributed'
+* Possible environments are 'standalone' and 'distributed'
 * If omitted this check can be applied to all groups.
 
 disabled = <boolean>
@@ -68,39 +68,42 @@ search = <ASCII string>
 *
 * THE SEARCH RESULT NEEDS TO BE IN THE FOLLOWING FORMAT:
 * |---------------------------------------------------------------
-* |     instance    |            metric         | severity_level |
+* | instance | metric | severity_level |
 * |---------------------------------------------------------------
 * | <instance name> | <metric number or string> | <level number> |
 * |---------------------------------------------------------------
-* |       ...       |              ...          |      ...       |
+* | ... | ... | ... |
 * |---------------------------------------------------------------
 *
 * <instance name> (required, unique) is either the "host" field of events or the
-  "splunk_server" field of "| rest" search.
-*   In order to generate this field, please do things like:
-*     ... | rename host as instance
-*   or
-*     ... | rename splunk_server as instance
+"splunk_server" field of "| rest" search.
+* In order to generate this field, please do things like:
+* ... | rename host as instance
+* or
+* ... | rename splunk_server as instance
 *
 * <metric number or string> (optional) one ore more columns to "show your work"
-*   This should be the data that severity_level is determined from.
-*   The user should be able to look at this field to get some idea of what made the instance fail this check.
+* This should be the data that severity_level is determined from.
+* The user should be able to look at this field to get some idea of what made the instance fail this check.
 *
 * <level number> (required) could be one of the following:
-*   - -1 (N/A) means: "Not Applicable"
-*   - 0 (ok) means: "all good"
-*   - 1 (info) means: "just ignore it if you don't understand"
-*   - 2 (warning) means: "well, you'd better take a look"
-*   - 3 (error) means: "FIRE!"
+* - -1 (N/A) means: "Not Applicable"
+* - 0 (ok) means: "all good"
+* - 1 (info) means: "just ignore it if you don't understand"
+* - 2 (warning) means: "well, you'd better take a look"
+* - 3 (error) means: "FIRE!"
 *
 * Please also note that the search string must contain either of the following
-  token to properly scope to either a single instance or a group of instances,
-  depending on the settings of checklistsettings.conf.
-    $rest_scope$ - used for "|rest" search
-    $hist_scope$ - used for historical search
+token to properly scope to either a single instance or a group of instances,
+depending on the settings of checklistsettings.conf.
+$rest_scope$ - used for "|rest" search
+$hist_scope$ - used for historical search
 
 drilldown = <ASCII string>
 * (optional) Link to a search or Monitoring Console dashboard for additional information.
 * Please note that the drilldown string must contain a $ delimited string.
-  * This string must match one of the fields output by the search.
-  * Most dashboards will need the name of the instance, eg $instance$
+* This string must match one of the fields output by the search.
+* Most dashboards will need the name of the instance, eg $instance$
+
+checklist.conf.example
+No example

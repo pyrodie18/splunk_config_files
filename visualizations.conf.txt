@@ -1,8 +1,8 @@
 visualizations.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains definitions for visualizations an app makes available
-# to the system. If you want your app to share visualizations with the system, 
+# to the system. If you want your app to share visualizations with the system,
 # include a visualizations.conf in $SPLUNK_HOME/etc/apps/<appname>/default
 # Within the file, include one stanza for each visualization to be shared.
 #
@@ -16,7 +16,7 @@ visualizations.conf.spec
 [<stanza name>]
 * Create a unique stanza name for each visualization that matches the visualization's name.
 * Follow the stanza name with any number of the following attribute/value
-  pairs.
+pairs.
 * If you don't specify an attribute, Splunk uses the default.
 
 disabled = <boolean>
@@ -42,7 +42,7 @@ description = <string>
 * Default: ""
 
 search_fragment = <string>
-* An example part of a search that formats the data correctly for the visualization. 
+* An example part of a search that formats the data correctly for the visualization.
 * Required.
 * Typically the last pipe or pipes in a search query.
 * Default: ""
@@ -100,12 +100,12 @@ data_sources = <comma-separated list>
 
 data_sources.<data-source-type>.params.output_mode = [json_rows|json_cols|json]
 * The data format that the visualization expects. Must be one of the following:
-  - "json_rows": corresponds to SplunkVisualizationBase.ROW_MAJOR_OUTPUT_MODE
-  - "json_cols": corresponds to SplunkVisualizationBase.COLUMN_MAJOR_OUTPUT_MODE
-  - "json": corresponds to SplunkVisualizationBase.RAW_OUTPUT_MODE
+- "json_rows": corresponds to SplunkVisualizationBase.ROW_MAJOR_OUTPUT_MODE
+- "json_cols": corresponds to SplunkVisualizationBase.COLUMN_MAJOR_OUTPUT_MODE
+- "json": corresponds to SplunkVisualizationBase.RAW_OUTPUT_MODE
 * Optional.
 * Requires the javascript implementation to supply initial data parameters.
-* Default: undefined 
+* Default: undefined
 
 data_sources.<data-source-type>.params.count = <integer>
 * How many rows of results to request
@@ -123,8 +123,8 @@ data_sources.<data-source-type>.params.sort_key = <string>
 
 data_sources.<data-source-type>.params.sort_direction = [asc|desc]
 * The direction of the sort:
-  - asc: Sort in ascending order
-  - desc: Sort in descending order
+- asc: Sort in ascending order
+- desc: Sort in descending order
 * Optional.
 * Default: desc
 
@@ -153,7 +153,7 @@ supports_drilldown = <boolean>
 supports_export = <boolean>
 * Whether the visualization supports being exported as a PDF.
 * Optional.
-* This setting has no effect in third-party visualizations. 
+* This setting has no effect in third-party visualizations.
 * Default: false
 
 # Internal settings for bundled visualizations. They are ignored for third party visualizations.

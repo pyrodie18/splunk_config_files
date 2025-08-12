@@ -1,8 +1,7 @@
-#   agent_management.conf.spec
-#   Version 9.4.0
+agent_management.conf.spec
+# Version 9.4.1
 #
 OVERVIEW
-`
 # This file contains descriptions of the settings that you can use to
 # configure the Agent Management feature.
 #
@@ -19,7 +18,6 @@ OVERVIEW
 # To learn more about configuration files (including file precedence) see the
 # documentation located at
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
-`
 [general]
 * Agent Management helper process settings. This stanza must exist.
 
@@ -27,7 +25,7 @@ fallback_to_deployment_server_ui = <boolean>
 * Indicates which UI the forwarder_management should use. When set to "false", the forwarder_management uses the agent management UI, When set to "true", the forwarder_management uses the deployment server UI.
 * Default: false.
 
-log_level = <string> 
+log_level = <string>
 * How verbose the logs are.
 * log level = DEBUG | INFO | WARN | ERROR | FATAL
 * Default: ERROR.
@@ -50,7 +48,7 @@ query_agents_with_error = <string>
 * The SPL search that is run to obtain a list of agents with a status of "error".
 
 query_agents_offline = <string>
-* The SPL search that is run to obtain a list of offline agents. 
+* The SPL search that is run to obtain a list of offline agents.
 
 query_agents_updated_config = <string>
 * The SPL search that is run to obtain a list of agents with updated configurations.
@@ -89,7 +87,7 @@ polling_interval = <string>
 * Default: 5m.
 
 agent_management.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This is an example agent_management.conf. Use this file to configure the Agent Management
 # settings, such as specifying the connection pool size or timeouts.
