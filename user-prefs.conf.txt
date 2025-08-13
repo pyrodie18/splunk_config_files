@@ -1,5 +1,5 @@
 user-prefs.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -145,7 +145,7 @@ notification_noah_upgrade = <string>
 <name> = <value>
 
 user-prefs.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # This is an example user-prefs.conf. Use this file to configure settings
 # on a per-user basis for use by the Splunk Web UI.

@@ -1,5 +1,5 @@
 serverclass.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains possible attributes and values for defining server
 # classes to which deployment clients can belong. These attributes and
@@ -462,7 +462,7 @@ updaterRunningFilter = <boolean>
 stateOnClient = enabled | disabled | noop
 
 serverclass.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # Example 1
 # Matches all clients and includes all apps in the server class

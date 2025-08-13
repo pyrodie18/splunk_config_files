@@ -1,5 +1,5 @@
 ui-prefs.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # DEPRECATED. Web browser local storage now handles the persistence of user
@@ -103,7 +103,7 @@ display.page.search.searchHistoryTimeFilter = [@d|-7d@d|-30d@d|-60d@d|-90d@d]
 display.page.search.searchHistoryCount = [10|20|50]
 
 ui-prefs.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # This file contains example of ui preferences for a view.
 #

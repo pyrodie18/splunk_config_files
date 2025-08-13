@@ -1,5 +1,5 @@
 inputs.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # This file contains possible settings you can use to configure inputs,
@@ -2759,6 +2759,22 @@ but rather 'targetDc'.
 * Default: The DC that the local host used to connect to AD. The
 input binds to its root Distinguished Name (DN).
 
+adsUseSSL = <boolean>
+* Whether or not the Splunk platform instance uses TLS to
+connect and bind to an Active Directory object for
+authentication.
+* A value of "true" means that the instance uses the
+ADS_USE_SSL flag when it attempts to bind to AD
+objects.
+* NOTE: For encrypted connections to work, you must have
+the appropriate certificates in place. See the chapter
+"Introduction to securing The Splunk Platform with TLS"
+in the Securing Splunk Enterprise Manual in the Splunk
+documentation for more information.
+* A value of "false" means that the instance does not attempt
+to encrypt connections to bind to AD objects over TLS.
+* Default: false
+
 startingNode = <string>
 * Where in the Active Directory directory tree to start monitoring.
 * The user that you configure Splunk software to run as at
@@ -4787,7 +4803,7 @@ still under development.
 * Default: 24h
 
 inputs.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # This is an example inputs.conf. Use this file to configure data inputs.
 #
@@ -4991,6 +5007,7 @@ startingNode = OU=Computers,DC=eng,DC=ad,DC=splunk,DC=com
 index = admon
 printSchema = 0
 baseline = 0
+adsUseSSL = false
 
 # Monitor two different DCs with different starting nodes.
 [admon://DefaultTargetDC]

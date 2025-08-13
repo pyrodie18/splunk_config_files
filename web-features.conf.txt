@@ -1,5 +1,5 @@
 web-features.conf.spec
-# Version 9.4.3
+# Version 9.4.4
 #
 OVERVIEW
 # This file contains descriptions of Splunk Web features used to configure
@@ -343,6 +343,17 @@ enable_app_bar_caching = <boolean>
 # CAUTION: Do not change this setting.
 * A value of "false" means that Splunk Web will not cache the app bar and not optimize performance when generating the app bar.
 * Default: true
+
+enable_saved_search_pageload_optimization = <boolean>
+* DEPRECATED.
+* Determines whether or not Splunk Web optimizes the fetching of details
+for saved searches.
+* A value of "true" means that Splunk Web optimizes the fetching of
+details for saved searches.
+* A value of "false" means that Splunk Web does not optimize the
+fetching of details for saved searches.
+* CAUTION: Do not change this setting.
+* Default: true
 [feature:spotlight_search]
 enable_spotlight_search = <boolean>
 * Determines whether Splunk Web displays the Spotlight Search bar in the
@@ -399,7 +410,7 @@ and CIDR ranges.
 
 
 web-features.conf.example
-# Version 9.4.3
+# Version 9.4.4
 #
 # You can configure Splunk Web features for your custom application.
 #
@@ -456,6 +467,7 @@ optimize_ui_prefs_performance = true
 enable_app_bar_performance_optimizations = true
 bypass_app_bar_performance_optimizations_apps = "search"
 enable_app_bar_caching = true
+enable_saved_search_pageload_optimization = true
 
 [feature:spotlight_search]
 enable_spotlight_search = true
