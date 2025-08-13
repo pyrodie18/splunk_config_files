@@ -259,6 +259,7 @@ information on this setting.
 deploymentclient.conf.example
 # Version 9.4.2
 #
+
 # Example 1
 # Deployment client receives apps and places them into the same
 # repositoryLocation (locally, relative to $SPLUNK_HOME) as it picked them
