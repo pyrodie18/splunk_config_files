@@ -1,5 +1,5 @@
 workflow_actions.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains possible attribute/value pairs for configuring workflow
 # actions in Splunk.
@@ -16,16 +16,15 @@ workflow_actions.conf.spec
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 
 GLOBAL SETTINGS
-
 # Use the [default] stanza to define any global settings.
-#  * You can also define global settings outside of any stanza, at the top
-#    of the file.
-#  * Each conf file should have at most one default stanza. If there are
-#    multiple default stanzas, attributes are combined. In the case of
-#    multiple definitions of the same attribute, the last definition in the
-#    file wins.
-#  * If an attribute is defined at both the global level and in a specific
-#    stanza, the value in the specific stanza takes precedence.
+# * You can also define global settings outside of any stanza, at the top
+# of the file.
+# * Each conf file should have at most one default stanza. If there are
+# multiple default stanzas, attributes are combined. In the case of
+# multiple definitions of the same attribute, the last definition in the
+# file wins.
+# * If an attribute is defined at both the global level and in a specific
+# stanza, the value in the specific stanza takes precedence.
 
 ############################################################################
 # General required settings:
@@ -48,27 +47,27 @@ label = <string>
 
 fields = <comma or space separated list>
 * The fields required to be present on the event in order for the workflow
-  action to be applied.
+action to be applied.
 * When "display_location" is set to "both" or "field_menu", the workflow
-  action will be applied to the menu's corresponding to the specified
-  fields.
+action will be applied to the menu's corresponding to the specified
+fields.
 * If fields is undefined or set to *, the workflow action is applied to all
-  field menus.
+field menus.
 * If the * character is used in a field name, it is assumed to act as a
-  "globber". For example host* would match the fields hostname, hostip, etc.
+"globber". For example host* would match the fields hostname, hostip, etc.
 * Acceptable values are any valid field name, any field name including the *
-  character, or * (e.g. *_ip).
+character, or * (e.g. *_ip).
 * Default: *
 
 eventtypes = <comma or space separated list>
 * The eventtypes required to be present on the event in order for the
-  workflow action to be applied.
+workflow action to be applied.
 * Acceptable values are any valid eventtype name, or any eventtype name plus
-  the * character (e.g. host*).
+the * character (e.g. host*).
 
 display_location = <string>
 * Dictates whether to display the workflow action in the event menu, the
-  field menus or in both locations.
+field menus or in both locations.
 * Accepts field_menu, event_menu, or both.
 * Default: both.
 
@@ -77,10 +76,9 @@ disabled = [True | False]
 * Default: False
 
 Using field names to insert values into workflow action settings
-
 # Several settings detailed below allow for the substitution of field values
 # using a special variable syntax, where the field's name is enclosed in
-# dollar signs.  For example, $_raw$, $hostip$, etc.
+# dollar signs. For example, $_raw$, $hostip$, etc.
 #
 # The settings, label, link.uri, link.postargs, and search.search_string all
 # accept the value of any valid field to be substituted into the final
@@ -94,13 +92,13 @@ Using field names to insert values into workflow action settings
 
 $@field_name$
 * Allows for the name of the current field being clicked on to be used in a
-  field action.
+field action.
 * Useful when constructing searches or links that apply to all fields.
 * NOT AVAILABLE FOR EVENT MENUS
 
 $@field_value$
 * Allows for the value of the current field being clicked on to be used in a
-  field action.
+field action.
 * Useful when constructing searches or links that apply to all fields.
 * NOT AVAILABLE FOR EVENT MENUS
 
@@ -114,12 +112,11 @@ $@namespace$
 * The name of the application from which the search was run.
 
 $@latest_time$
-* The latest time the event occurred.  This is used to disambiguate similar
-  events from one another. It is not often available for all fields.
+* The latest time the event occurred. This is used to disambiguate similar
+events from one another. It is not often available for all fields.
 
 
 Field action types
-
 ############################################################################
 # Link type:
 # Allows for the construction of GET and POST requests via links to external
@@ -134,27 +131,27 @@ link.uri = <string>
 
 link.target = <string>
 * Determines if clicking the link opens a new window, or redirects the
-  current window to the resource defined in link.uri.
+current window to the resource defined in link.uri.
 * Accepts: "blank" (opens a new window), "self" (opens in the same window)
 * Default: "blank"
 
 link.method = <string>
 * Determines if clicking the link should generate a GET request or a POST
-  request to the resource defined in link.uri.
+request to the resource defined in link.uri.
 * Accepts: "get" or "post".
 * Default: "get".
 
 link.postargs.<int>.<key/value> = <value>
 * Only available when link.method = post.
 * Defined as a list of key / value pairs like such that foo=bar becomes:
-  link.postargs.1.key = "foo"
-  link.postargs.1.value = "bar"
+link.postargs.1.key = "foo"
+link.postargs.1.value = "bar"
 * Allows for a conf compatible method of defining multiple identical keys (e.g.):
-  link.postargs.1.key = "foo"
-  link.postargs.1.value = "bar"
-  link.postargs.2.key = "foo"
-  link.postargs.2.value = "boo"
-  ...
+link.postargs.1.key = "foo"
+link.postargs.1.value = "bar"
+link.postargs.2.key = "foo"
+link.postargs.2.value = "boo"
+...
 * All values are html form encoded appropriately.
 
 ############################################################################
@@ -166,12 +163,12 @@ search.search_string = <string>
 * The search string to construct.
 * Accepts field values in the form $<field name>$, (e.g. $_raw$).
 * Does NOT attempt to determine if the inserted field values may break
-  quoting or other search language escaping.
+quoting or other search language escaping.
 * Required
 
 search.app = <string>
 * The name of the Splunk application in which to perform the constructed
-  search.
+search.
 * By default this is set to the current app.
 
 search.view = <string>
@@ -193,20 +190,20 @@ search.latest = <time>
 search.preserve_timerange = <boolean>
 * Ignored if either the search.earliest or search.latest values are set.
 * When true, the time range from the original search which produced the
-  events list will be used.
+events list will be used.
 * Default: false.
 
 workflow_actions.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This is an example workflow_actions.conf.  These settings are used to
-# create workflow actions accessible in an event viewer.  Refer to
+# This is an example workflow_actions.conf. These settings are used to
+# create workflow actions accessible in an event viewer. Refer to
 # workflow_actions.conf.spec and the documentation at splunk.com for more
 # information about this file.
 #
 # To use one or more of these configurations, copy the configuration block
 # into workflow_actions.conf in $SPLUNK_HOME/etc/system/local/, or into your
-# application's local/ folder.  You must restart Splunk to enable
+# application's local/ folder. You must restart Splunk to enable
 # configurations.
 #
 # To learn more about configuration files (including precedence) please see
@@ -259,7 +256,7 @@ link.uri = http://www.google.com/search?q=$@field_value$
 type = link
 
 # This is an example post link that will send its field name and field value
-# to a  fictional bug tracking system.
+# to a fictional bug tracking system.
 
 [Create JIRA issue]
 display_location = field_menu

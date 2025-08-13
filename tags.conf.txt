@@ -1,5 +1,5 @@
 tags.conf.spec
-# Version 9.4.0
+# Version 9.4.1
 #
 # This file contains possible attribute/value pairs for configuring tags. Set
 # any number of tags for indexed or extracted fields.
@@ -14,10 +14,10 @@ tags.conf.spec
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 [<fieldname>=<value>]
 * The field name and value to which the tags in the stanza
-  apply. For example, host=localhost.
+apply. For example, host=localhost.
 * A tags.conf file can contain multiple stanzas. It is recommended that the
-  value be URL encoded to avoid configuration file parsing errors, especially
-  if the field value contains the following characters: \n, =, []
+value be URL encoded to avoid configuration file parsing errors, especially
+if the field value contains the following characters: \n, =, []
 * Each stanza can refer to only one field/value pair.
 
 <tag1> = <enabled|disabled>
@@ -25,16 +25,16 @@ tags.conf.spec
 <tag3> = <enabled|disabled>
 * Enable or disable each <tag> for this specific field/value pair.
 * While you can have multiple tags in a stanza (meaning that multiple tags are
-  assigned to the same field/value combination), only one tag is allowed per
-  stanza line. In other words, you can't have a list of tags on one line of the
-  stanza.
+assigned to the same field/value combination), only one tag is allowed per
+stanza line. In other words, you can't have a list of tags on one line of the
+stanza.
 * CAUTION: Do not put the <tag> value in quotes. For example,
-  use foo=enabled, not "foo"=enabled.
+use foo=enabled, not "foo"=enabled.
 
 tags.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This is an example tags.conf.  Use this file to define tags for fields.
+# This is an example tags.conf. Use this file to define tags for fields.
 #
 # To use one or more of these configurations, copy the configuration block into
 # tags.conf in $SPLUNK_HOME/etc/system/local/. You must restart Splunk to

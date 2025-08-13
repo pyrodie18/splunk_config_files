@@ -1,12 +1,12 @@
 source-classifier.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains all possible options for configuring settings for the
 # file classifier in source-classifier.conf.
 #
 # There is a source-classifier.conf in $SPLUNK_HOME/etc/system/default/ To
 # set custom configurations, place a source-classifier.conf in
-# $SPLUNK_HOME/etc/system/local/.  For examples, see
+# $SPLUNK_HOME/etc/system/local/. For examples, see
 # source-classifier.conf.example. You must restart Splunk to enable
 # configurations.
 #
@@ -18,18 +18,18 @@ source-classifier.conf.spec
 ignored_model_keywords = <space-separated list of terms>
 * Terms to ignore when generating a sourcetype model.
 * To prevent sourcetype "bundles/learned/*-model.xml" files from containing
-  sensitive terms (e.g. "bobslaptop") that occur very frequently in your
-  data files, add those terms to ignored_model_keywords.
+sensitive terms (e.g. "bobslaptop") that occur very frequently in your
+data files, add those terms to ignored_model_keywords.
 
 ignored_filename_keywords = <space-separated list of terms>
 * Terms to ignore when comparing a new sourcename against a known
-  sourcename, for the purpose of classifying a source.
+sourcename, for the purpose of classifying a source.
 
 
 source-classifier.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This file contains an example source-classifier.conf.  Use this file to
+# This file contains an example source-classifier.conf. Use this file to
 # configure classification
 # of sources into sourcetypes.
 #

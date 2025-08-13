@@ -1,10 +1,10 @@
 messages.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 # This file contains attribute/value pairs for configuring externalized strings
 # in messages.conf.
 #
-# There is a messages.conf in $SPLUNK_HOME/etc/system/default/.  To set custom
+# There is a messages.conf in $SPLUNK_HOME/etc/system/default/. To set custom
 # configurations, place a messages.conf in $SPLUNK_HOME/etc/system/local/. You
 # must restart the instance to enable configurations.
 #
@@ -21,9 +21,9 @@ messages.conf.spec
 #
 # For example, assume the following message resource is defined:
 #
-#   [COMPONENT:MSG_KEY__D_LU_S]
-#   message = FunctionX returned %d, expected %lu.
-#   action  = See %s for details.
+# [COMPONENT:MSG_KEY__D_LU_S]
+# message = FunctionX returned %d, expected %lu.
+# action = See %s for details.
 #
 # The message key expects 3 printf-style arguments: %d, %lu, %s. These arguments
 # can be in either the message or action fields but must appear in the same order.
@@ -34,9 +34,9 @@ messages.conf.spec
 #
 # For example, a message can link to a specific Splunk Web page using this pattern:
 #
-#   [COMPONENT:MSG_LINK__S]
-#   message = License key '%s' is invalid.
-#   action  = See [[/manager/system/licensing|Licensing]] for details.
+# [COMPONENT:MSG_LINK__S]
+# message = License key '%s' is invalid.
+# action = See [[/manager/system/licensing|Licensing]] for details.
 #
 # Another custom formatting option is for date/time arguments. If the argument
 # should be rendered in local time and formatted to a specific language,
@@ -50,9 +50,9 @@ messages.conf.spec
 #
 # For example, assume the following message resource is defined:
 #
-#   [COMPONENT:TIME_BASED_MSG__LD]
-#   message = Component exception @ $t%ld.
-#   action  = See splunkd.log for details.
+# [COMPONENT:TIME_BASED_MSG__LD]
+# message = Component exception @ $t%ld.
+# action = See splunkd.log for details.
 #
 # The first argument is prefixed with "$t", and therefore will be treated as a
 # unix timestamp. It will be formatted as a date/time string.
@@ -86,7 +86,7 @@ message_alternate = <string>
 
 action = <string>
 * A string that describes the suggested next step to take in reaction
-  to the message.
+to the message.
 * Default: empty string
 
 severity = critical|error|warn|info|debug
@@ -101,9 +101,9 @@ roles = <comma-separated list>
 * A comma-separated list of the roles required to view the message.
 * If a user belongs to any of these roles, the user will see the message.
 * If a role scope is specified with this setting, it takes precedence over the
-  "capabilities" setting, which is ignored for the message.
+"capabilities" setting, which is ignored for the message.
 * This setting should be manually configured with any system- or user-created
-  role.
+role.
 * Default (Splunk Enterprise): not set
 
 help = <string>
@@ -112,26 +112,26 @@ help = <string>
 
 target = [auto|ui|log|ui,log|none]
 * Sets the message display target.
-  * "auto" means the message display target is automatically determined by
-    context.
-  * "ui" messages are displayed in Splunk Web and can be passed on from
-    search peers to search heads in a distributed search environment.
-  * "log" messages are displayed only in the log files for the instance under
-    the BulletinBoard component, with log levels that respect their message
-    severity. For example, messages with severity "info" are displayed as INFO
-    log entries.
-  * "ui,log" combines the functions of the "ui" and "log" options.
-  * "none" completely hides the message. (Please consider using "log" and
-    reducing severity instead. Using "none" might impact diagnosability.)
+* "auto" means the message display target is automatically determined by
+context.
+* "ui" messages are displayed in Splunk Web and can be passed on from
+search peers to search heads in a distributed search environment.
+* "log" messages are displayed only in the log files for the instance under
+the BulletinBoard component, with log levels that respect their message
+severity. For example, messages with severity "info" are displayed as INFO
+log entries.
+* "ui,log" combines the functions of the "ui" and "log" options.
+* "none" completely hides the message. (Please consider using "log" and
+reducing severity instead. Using "none" might impact diagnosability.)
 * Default: auto
 
 messages.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This file contains an example messages.conf of attribute/value pairs for 
+# This file contains an example messages.conf of attribute/value pairs for
 # configuring externalized strings.
 #
-# There is a messages.conf in $SPLUNK_HOME/etc/system/default/.  To set custom
+# There is a messages.conf in $SPLUNK_HOME/etc/system/default/. To set custom
 # configurations, place a messages.conf in $SPLUNK_HOME/etc/system/local/. You
 # must restart the instance to enable configurations.
 #
@@ -147,42 +147,42 @@ messages.conf.example
 name = Disk Monitor
 
 [DISK_MON:INSUFFICIENT_DISK_SPACE_ERROR__S_S_LLU]
-message      = Cannot write data to index path '%s' because you are low on disk space on partition '%s'. Indexing has been paused.
-action       = Free disk space above %lluMB to resume indexing.
-severity     = warn
+message = Cannot write data to index path '%s' because you are low on disk space on partition '%s'. Indexing has been paused.
+action = Free disk space above %lluMB to resume indexing.
+severity = warn
 capabilities = indexes_edit
-help         = learnmore.indexer.setlimits
+help = learnmore.indexer.setlimits
 
 
 [LM_LICENSE]
 name = License Manager
 
 [LM_LICENSE:EXPIRED_STATUS__LD]
-message      = Your license has expired as of $t%ld.
-action       = $CONTACT_SPLUNK_SALES_TEXT$
+message = Your license has expired as of $t%ld.
+action = $CONTACT_SPLUNK_SALES_TEXT$
 capabilities = license_edit
 
 [LM_LICENSE:EXPIRING_STATUS__LD]
-message      = Your license will soon expire on $t%ld.
-action       = $CONTACT_SPLUNK_SALES_TEXT$
+message = Your license will soon expire on $t%ld.
+action = $CONTACT_SPLUNK_SALES_TEXT$
 capabilities = license_edit
 
 [LM_LICENSE:INDEXING_LIMIT_EXCEEDED]
-message      = Daily indexing volume limit exceeded today.
-action       = See [[/manager/search/licenseusage|License Manager]] for details.
-severity     = warn
+message = Daily indexing volume limit exceeded today.
+action = See [[/manager/search/licenseusage|License Manager]] for details.
+severity = warn
 capabilities = license_view_warnings
-help         = learnmore.license.features
+help = learnmore.license.features
 
 [LM_LICENSE:MASTER_CONNECTION_ERROR__S_LD_LD]
-message      = Failed to contact license master: reason='%s', first failure time=%ld ($t%ld).
-severity     = warn
+message = Failed to contact license master: reason='%s', first failure time=%ld ($t%ld).
+severity = warn
 capabilities = license_edit
-help         = learnmore.license.features
+help = learnmore.license.features
 
 [LM_LICENSE:SLAVE_WARNING__LD_S]
-message      = License warning issued within past 24 hours: $t%ld.
-action       = Please refer to the License Usage Report view on license master '%s' to find out more.
-severity     = warn
+message = License warning issued within past 24 hours: $t%ld.
+action = Please refer to the License Usage Report view on license master '%s' to find out more.
+severity = warn
 capabilities = license_edit
-help         = learnmore.license.features
+help = learnmore.license.features

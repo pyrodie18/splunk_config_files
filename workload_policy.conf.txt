@@ -1,8 +1,7 @@
 workload_policy.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 OVERVIEW
-
 # This file contains descriptions of the settings that you can use to
 # configure search admission control for splunk.
 #
@@ -21,13 +20,13 @@ OVERVIEW
 # documentation located at
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 #
-# Settings to configure search admission control, including enabling/disabling feature 
+# Settings to configure search admission control, including enabling/disabling feature
 # and other configurations.
 [search_admission_control]
 admission_rules_enabled = <bool>
 * Determines whether admission rules are applied to searches.
 * If set to true, admission rules for pre-filtering searches are applied when a search
-  is dispatched.
+is dispatched.
 * Default: 0
 
 workload_policy.conf.example

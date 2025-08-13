@@ -1,8 +1,7 @@
 times.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 OVERVIEW
-
 # This file contains possible attribute/value pairs for creating custom time
 # ranges.
 #
@@ -24,16 +23,15 @@ OVERVIEW
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 #
 GLOBAL SETTINGS
-
 # Use the [default] stanza to define any global settings.
-#   * You can also define global settings outside of any stanza, at the top
-#     of the file.
-#   * Each conf file should have at most one default stanza. If there are
-#     multiple default stanzas, attributes are combined. In the case of
-#     multiple definitions of the same attribute, the last definition in the
-#     file wins.
-#   * If an attribute is defined at both the global level and in a specific
-#     stanza, the value in the specific stanza takes precedence.
+# * You can also define global settings outside of any stanza, at the top
+# of the file.
+# * Each conf file should have at most one default stanza. If there are
+# multiple default stanzas, attributes are combined. In the case of
+# multiple definitions of the same attribute, the last definition in the
+# file wins.
+# * If an attribute is defined at both the global level and in a specific
+# stanza, the value in the specific stanza takes precedence.
 [<timerange_name>]
 * The token to use when accessing time ranges through the API or command line.
 * A times.conf file can contain multiple stanzas.
@@ -44,31 +42,31 @@ label = <string>
 
 header_label = <string>
 * The textual description used by the UI when displaying search results in
-  this time range.
+this time range.
 * Optional.
 * Default: The <timerange_name>
 
 earliest_time = <string>
 * The string that represents the time of the earliest event to return,
-  inclusive.
+inclusive.
 * The time can be expressed with a relative time identifier or in UNIX time.
 * Optional.
 * No default (No earliest time bound is used)
 
 latest_time = <string>
 * The string that represents the time of the earliest event to return,
-  inclusive.
+inclusive.
 * The time can be expressed with a relative time identifier or in UNIX
-  time.
+time.
 * Optional.
 * NOTE: events that occur in the future (relative to the server timezone)
-        might be returned.
+might be returned.
 * No default (No latest time bound is used)
 
 order = <integer>
 * The key on which all custom time ranges are sorted, ascending.
 * The default time range selector in the UI will merge and sort all time
-  ranges according to the 'order' key, and then alphabetically.
+ranges according to the 'order' key, and then alphabetically.
 * Optional.
 * Default: 0
 
@@ -78,10 +76,10 @@ disabled = <integer>
 * Default: 0
 
 sub_menu = <submenu name>
-* REMOVED.  This setting is no longer used.
+* REMOVED. This setting is no longer used.
 
 is_sub_menu = <boolean>
-* REMOVED.  This setting is no longer used.
+* REMOVED. This setting is no longer used.
 [settings]
 * List of flags that modify the panels that are displayed in the time range picker.
 
@@ -116,9 +114,9 @@ show_relative = <boolean>
 * Default: true
 
 times.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This is an example times.conf.  Use this file to create custom time ranges
+# This is an example times.conf. Use this file to create custom time ranges
 # that can be used while interacting with the search system.
 #
 # To use one or more of these configurations, copy the configuration block
@@ -129,7 +127,7 @@ times.conf.example
 # the documentation located at
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 
-# Note: These are examples.  Replace the values with your own customizations.
+# Note: These are examples. Replace the values with your own customizations.
 
 
 # The stanza name is an alphanumeric string (no spaces) that uniquely
@@ -145,7 +143,7 @@ header_label = during this business week
 earliest_time = +1d@w1
 latest_time = +6d@w6
 
-# Define the ordering sequence of this time range.  All time ranges are
+# Define the ordering sequence of this time range. All time ranges are
 # sorted numerically, ascending. If the time range is in a sub menu and not
 # in the main menu, this will determine the position within the sub menu.
 order = 110

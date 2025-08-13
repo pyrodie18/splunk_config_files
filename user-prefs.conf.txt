@@ -1,8 +1,7 @@
 user-prefs.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 OVERVIEW
-
 # This file contains descriptions of the settings that you can use to
 # configure on a per-user basis for use by the Splunk Web UI.
 #
@@ -43,24 +42,24 @@ OVERVIEW
 [general]
 default_namespace = <app name>
 * Specifies the app that the user will see initially on login to the
-  Splunk Web User Interface.
+Splunk Web User Interface.
 * This uses the "short name" of the app, such as launcher, or search,
-  which is synonymous with the app directory name.
+which is synonymous with the app directory name.
 * Default: launcher (via the default authorize.conf file)
 
 tz = <timezone>
 * Specifies the per-user timezone to use.
 * If unset, the timezone of the Splunk Server or Search Head is used.
 * Only canonical timezone names such as America/Los_Angeles should be
-  used (for best results use the Splunk UI).
+used (for best results use the Splunk UI).
 * No default.
 
 lang = <string>
 * Specifies the per-user language preference for non-web ui operations, where
-  multiple tags are separated by commas.
+multiple tags are separated by commas.
 * If unset, English "en-US" is used when required.
 * Only tags used in the "Accept-Language" HTTP header are allowed, such as
-  "en-US" or "fr-FR".
+"en-US" or "fr-FR".
 * Fuzzy matching is supported, where "en" will match "en-US".
 * Optional quality settings are supported, such as "en-US,en;q=0.8,fr;q=0.6"
 * No default.
@@ -77,14 +76,14 @@ restart_background_jobs = <boolean>
 
 install_source_checksum = <string>
 * Records a checksum of the tarball from which a given set of private user
-  configurations was installed.
+configurations was installed.
 * Analogous to <install_source_checksum> in the app.conf file.
 
 search_syntax_highlighting = [default-system-theme|light|dark|black-white]
 * Highlights different parts of a search string with different colors.
 * Dashboards ignore this setting.
 * default-system-theme = Inherits the default system theme if the current app
-  supports theming.
+supports theming.
 * light = White background with dark colored text.
 * dark = Black background with light colored text.
 * black-white = White background with black text.
@@ -102,8 +101,8 @@ search_assistant = [full|compact|none]
 theme = [default_system_theme|light|dark]
 * Specifies the preferred theme for the user.
 * Not all apps used with the Splunk platform support the dark theme. If
-  supported by the app, the theme is applied to the UI by Splunk Web.
-  Otherwise, Splunk Web applies the default system theme.
+supported by the app, the theme is applied to the UI by Splunk Web.
+Otherwise, Splunk Web applies the default system theme.
 * Default: default_system_theme
 
 app_bar_cache_timeout_min = <integer>
@@ -146,9 +145,9 @@ notification_noah_upgrade = <string>
 <name> = <value>
 
 user-prefs.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
-# This is an example user-prefs.conf.  Use this file to configure settings
+# This is an example user-prefs.conf. Use this file to configure settings
 # on a per-user basis for use by the Splunk Web UI.
 #
 # To use one or more of these configurations, copy the configuration block
@@ -159,7 +158,7 @@ user-prefs.conf.example
 # the documentation located at
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 
-# Note: These are examples.  Replace the values with your own
+# Note: These are examples. Replace the values with your own
 # customizations.
 
 

@@ -1,8 +1,7 @@
 global-banner.conf.spec
-#   Version 9.4.0
+# Version 9.4.1
 #
 OVERVIEW
-
 # This file contains descriptions of the settings that you can use to
 # configure a global banner at the top of every page in Splunk, above the Splunk bar.
 #
@@ -24,7 +23,7 @@ OVERVIEW
 # http://docs.splunk.com/Documentation/Splunk/latest/Admin/Aboutconfigurationfiles
 [BANNER_MESSAGE_SINGLETON]
 * IMPORTANT: It is only possible to declare one global banner. This is the only
-  stanza that Splunk Web will read.
+stanza that Splunk Web will read.
 
 global_banner.visible = <bool>
 * Default: false
@@ -42,7 +41,7 @@ global_banner.hyperlink_text = <string>
 * Default: none
 
 global-banner.conf.example
-#   Version 9.4.0
+# Version 9.4.1
 #
 # The following are example global-banner.conf configurations. Configure properties for
 # your custom application.
