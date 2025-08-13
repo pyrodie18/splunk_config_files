@@ -1,5 +1,5 @@
 source-classifier.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains all possible options for configuring settings for the
 # file classifier in source-classifier.conf.
@@ -27,7 +27,7 @@ sourcename, for the purpose of classifying a source.
 
 
 source-classifier.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains an example source-classifier.conf. Use this file to
 # configure classification

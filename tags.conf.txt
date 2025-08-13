@@ -1,5 +1,5 @@
 tags.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains possible attribute/value pairs for configuring tags. Set
 # any number of tags for indexed or extracted fields.
@@ -32,7 +32,7 @@ stanza.
 use foo=enabled, not "foo"=enabled.
 
 tags.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This is an example tags.conf. Use this file to define tags for fields.
 #

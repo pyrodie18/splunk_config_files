@@ -1,5 +1,5 @@
 default.meta.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 #
 # *.meta files contain ownership information, access controls, and export
@@ -61,7 +61,7 @@ owner = admin
 * Set admin as the owner of this view.
 
 default.meta.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains example patterns for the metadata files default.meta and
 # local.meta
