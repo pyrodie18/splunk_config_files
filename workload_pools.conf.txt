@@ -1,5 +1,5 @@
 workload_pools.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -114,7 +114,7 @@ that are positive integer values less than 100.
 * Default is set.
 
 workload_pools.conf.example
-# Version 9.4.2
+# Version 9.4.3
 # CAUTION: Do not alter the settings in workload_pools.conf unless you know what you are doing.
 # Improperly configured workloads may result in splunkd crashes and/or memory overuse.
 

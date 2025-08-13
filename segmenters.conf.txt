@@ -1,5 +1,5 @@
 segmenters.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -107,7 +107,7 @@ are discarded without prejudice.
 * Default: -1
 
 segmenters.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # The following are examples of segmentation configurations.
 #

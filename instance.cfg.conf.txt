@@ -1,5 +1,5 @@
-nstance.cfg.spec
-# Version 9.4.2
+instance.cfg.conf.spec
+# Version 9.4.3
 #
 # This file contains the set of attributes and values you can expect to find in
 # the SPLUNK_HOME/etc/instance.cfg file; the instance.cfg file is not to be
@@ -49,8 +49,8 @@ constructed.
 * The standard regexp to match an all-uppercase GUID is
 "[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}".
 
-instance.cfg.example
-# Version 9.4.2
+instance.cfg.conf.example
+# Version 9.4.3
 #
 # This file contains an example SPLUNK_HOME/etc/instance.cfg file; the
 # instance.cfg file is not to be modified or removed by user. LEAVE THE

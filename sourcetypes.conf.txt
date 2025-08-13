@@ -1,5 +1,5 @@
 sourcetypes.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 # NOTE: sourcetypes.conf is a machine-generated file that stores the document
 # models used by the file classifier for creating source types.
@@ -38,7 +38,7 @@ _source = <value>
 * Specifies the source (filename) for the model.
 
 sourcetypes.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file contains an example sourcetypes.conf. Use this file to configure
 # sourcetype models.

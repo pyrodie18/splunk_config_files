@@ -1,5 +1,5 @@
 macros.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use for
@@ -79,7 +79,7 @@ description = <string>
 * OPTIONAL. A simple description of what the macro does.
 
 macros.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # Example macros.conf
 #

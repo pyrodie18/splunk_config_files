@@ -1,5 +1,5 @@
 props.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file contains possible setting/value pairs for configuring Splunk
 # software's processing properties through props.conf.
@@ -1679,7 +1679,7 @@ sensitive. Does not affect indexing behavior.
 * Default: not set
 
 props.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # The following are example props.conf configurations. Configure properties for
 # your data.

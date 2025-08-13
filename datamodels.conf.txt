@@ -1,5 +1,5 @@
 datamodels.conf.spec
-# Version 9.4.2
+# Version 9.4.3
 #
 # This file contains possible attribute/value pairs for configuring
 # data models. To configure a datamodel for an app, put your custom
@@ -342,7 +342,7 @@ unnecessary tag fields when you perform searches with this data model.
 * Default: empty (not set)
 
 datamodels.conf.example
-# Version 9.4.2
+# Version 9.4.3
 #
 # Configuration for example datamodels
 #
