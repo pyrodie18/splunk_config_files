@@ -1,5 +1,5 @@
 authorize.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -898,7 +898,7 @@ and Splunk Cloud Services(SCS) instances.
 
 
 authorize.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example authorize.conf. Use this file to configure roles and
 # capabilities.

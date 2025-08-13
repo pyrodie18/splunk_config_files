@@ -1,5 +1,5 @@
 collections.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file configures the KV Store collections for a given app in Splunk.
 #
@@ -89,7 +89,7 @@ erases the data in the collection.
 * Default: undefined
 
 collections.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # The following is an example collections.conf configuration.
 #

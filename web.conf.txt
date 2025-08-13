@@ -1,5 +1,5 @@
 web.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains possible attributes and values you can use to configure
 # the Splunk Web interface.
@@ -1567,7 +1567,7 @@ for example: https://<server>:<port>/services/remote-proxy/<REST endpoint>?proxy
 * Default: false
 
 web.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example web.conf. Use this file to configure data web
 # settings.

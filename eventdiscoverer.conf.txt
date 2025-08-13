@@ -1,5 +1,5 @@
 eventdiscoverer.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 
 # This file contains possible settings and values you can use to configure
 # event discovery through the search command "typelearner."
@@ -47,7 +47,7 @@ an important keyword.
 * For the full default setting, see $SPLUNK_HOME/etc/system/default/eventdiscoverer.conf.
 
 eventdiscoverer.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example eventdiscoverer.conf. These settings are used to control
 # the discovery of common eventtypes used by the typelearner search command.

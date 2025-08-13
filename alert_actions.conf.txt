@@ -1,5 +1,5 @@
 alert_actions.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 OVERVIEW
 # This file contains descriptions of the settings that you can use to
@@ -606,7 +606,7 @@ information about this setting.
 [<custom_alert_action>]
 
 alert_actions.conf.example
-# Version 9.4.1
+# Version 9.4.2
 #
 # This is an example alert_actions.conf. Use this file to configure alert
 # actions for saved searches.

@@ -1,5 +1,5 @@
 pubsub.conf.spec
-# Version 9.4.1
+# Version 9.4.2
 #
 # This file contains possible attributes and values for configuring a client of
 # the PubSub system (broker).
@@ -60,7 +60,7 @@ targetUri = <IP:Port>|<hostname:Port>|direct
 instance as the broker.
 
 pubsub.conf.example
-# Version 9.4.1
+# Version 9.4.2
 
 [pubsub-server:deploymentServer]
 disabled=false
