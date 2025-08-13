@@ -1,7 +1,4 @@
 rolling_upgrade.conf.spec
-# Version 9.3.0
-#
-
 # This file contains descriptions of the settings you can use to configure the
 # splunk-rolling-upgrade app.
 [logging]
@@ -89,15 +86,18 @@ Authentication is not supported.
 ftp://) result in an error.
 * Default: none
 
-md5_checksum = <string>
-* Specifies the md5 checksum of the installation package pointed to by
+sha256_checksum = <string>
+* Specifies the sha256 checksum of the installation package pointed to by
 'package_path' in a hexadecimal format.
 * If the calculated checksum of the package is different than the checksum
-specified in this setting or if the 'md5_checksum' value is missing, the
+specified in this setting or if the 'sha256_checksum' value is missing, the
 splunk-rolling-upgrade app won't install the package, and the upgrade
 will be stopped.
-* Example: md5_checksum = 1234567890abcdef1234567890abcdef
+* Example: sha256_checksum = 8eaa2e2fe5063e71e837cd27af1c2fa51b10c6a1cf159f49aab4e9ab8016980c
 * Default: none
+
+md5_checksum = <string>
+* DEPRECATED. Use 'sha256_checksum' instead.
 [hook]
 # These settings specify a hook script that installs Splunk Enterprise on
 # Linux machines during automated rolling upgrade. To install from a .tgz

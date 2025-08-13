@@ -1,5 +1,5 @@
 eventtypes.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains descriptions of the settings that you can use to
 # configure event types and their properties.
@@ -78,7 +78,7 @@ et_purple, et_red, et_sky, et_teal, et_yellow
 
 
 eventtypes.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains an example eventtypes.conf. Use this file to configure custom eventtypes.
 #

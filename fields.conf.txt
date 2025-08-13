@@ -1,5 +1,5 @@
 fields.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 OVERVIEW
 # This file contains possible attribute and value pairs for:
@@ -115,7 +115,7 @@ into applying the LISPY expression '[OR myvalue source::*myvalue]'
 * Default: true
 
 fields.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains an example fields.conf. Use this file to configure
 # dynamic field extractions.

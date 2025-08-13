@@ -1,5 +1,5 @@
 ui-prefs.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 OVERVIEW
 # DEPRECATED. Web browser local storage now handles the persistence of user
@@ -57,6 +57,9 @@ display.prefs.enableMetaData = 0 | 1
 display.prefs.showDataSummary = 0 | 1
 display.prefs.customSampleRatio = <int>
 display.prefs.showSPL = 0 | 1
+
+* Support for this setting has been removed. The setting no longer has
+any effect.
 display.prefs.livetail = 0 | 1
 
 # Count per page for listing pages
@@ -103,7 +106,7 @@ display.page.search.searchHistoryTimeFilter = [@d|-7d@d|-30d@d|-60d@d|-90d@d]
 display.page.search.searchHistoryCount = [10|20|50]
 
 ui-prefs.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file contains example of ui preferences for a view.
 #

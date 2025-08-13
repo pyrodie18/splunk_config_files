@@ -1,5 +1,5 @@
 app.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 OVERVIEW
 # This file maintains the state of a given app in the Splunk platform. It can
@@ -410,9 +410,16 @@ this setting must appear in etc/peer-apps/appname/default/app.conf or
 local/app.conf
 * Additional lists can be created with default_gather_lookups-classname = ...
 * Default: not set
+[data_management]
+* This stanza applies to Data Management navigation plugins
+
+plugin_enabled = <boolean>
+* Set this variable to true to declare that the app contains a Data Management plugin
+that will appear in the Data Management UI as a navigation item.
+* Default: false
 
 app.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # The following are example app.conf configurations. Configure properties for
 # your custom application.

@@ -1,5 +1,5 @@
 viewstates.conf.spec
-# Version 9.4.4
+# Version 10.0.0
 #
 # This file explains how to format viewstates.
 #
@@ -37,7 +37,7 @@ i.e., all defaults
 * The <setting_name> is the setting designated by <module_id> to persist
 
 viewstates.conf.example
-# Version 9.4.4
+# Version 10.0.0
 #
 # This is an example viewstates.conf.
 #
